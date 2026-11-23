@@ -9,7 +9,9 @@ services:
       - "6379:6379"
 
   bookmark_services:
-    image: ebvn_test:latest
+    image: bookmark_service:dev
+    build: .
+    restart: always
     container_name: bookmark_service
     ports:
       - "8080:8080"
